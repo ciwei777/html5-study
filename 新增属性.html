@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <label>
+        placeholder:
+        <input type="text" placeholder="请输入...">
+    </label>
+    <label>
+        autofocus:
+        <input type="text" placeholder="请输入..." autofocus>
+    </label>
+    <label>
+        autocomplete:
+        <form action="">
+            <!--  必须有name 且 autocomplete="on"-->
+            <input type="text" name="text" autocomplete="on">
+            <button>提交</button>
+        </form>
+    </label>
+    <label>
+        required:
+        <form action="">
+            <input type="text" required>
+            <button>提交</button>
+        </form>
+    </label>
+    <label>
+        pattern:
+        <form action="">
+            <input type="text" pattern="13[0-9]{9}">
+            <button>提交</button>
+        </form>
+    </label>
+    <label>
+        multiple :
+        <form action="">
+            <input type="file" multiple ="multiple ">
+            <button>提交</button>
+        </form>
+    </label>
+</body>
+
+</html>

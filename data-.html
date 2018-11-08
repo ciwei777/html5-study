@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div data-id="777">我是一个DIV</div>
+    <script>
+        var box = document.querySelector('div')
+        // 获取自定义属性
+        console.log(box.dataset.id)
+        // 声明式添加自定义属性
+        box.dataset.age = 18
+        console.log(box.dataset)
+        // 删除自定义属性
+        delete box.dataset.id
+        console.log(box.dataset)
+    </script>
+</body>
+</html>

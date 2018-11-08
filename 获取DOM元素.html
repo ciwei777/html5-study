@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li id="flag">3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+    <div>第二个DIV</div>
+    <script>
+        // querySelector(标签名) 通过标签名获取元素 【只能取第一个】
+        var box = document.querySelector('div')
+        box.style.width = "300px"
+        box.style.height = "300px"
+        box.style.backgroundColor = "pink"
+        // querySelectorAll(标签名) 通过标签名获取元素 【返回数组】
+        var boxArr = document.querySelectorAll('div')
+        for (i = 0; i < boxArr.length; i++) {
+            boxArr[i].style.color = "red"
+        }
+        // querySelector('.xxx') 通过类名获取元素
+        var liAct = document.querySelector('.active')
+        liAct.style.fontSize = "30px"
+        // querySelector('#xxx') 通过ID获取元素
+        var liFlag = document.querySelector('#flag')
+        liFlag.style.backgroundColor = "skyblue"
+    </script>
+</body>
+</html>

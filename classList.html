@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+        .box-30 {
+            font-size: 30px;
+        }
+       .box-red {
+           color: red;
+       }
+       .box-bgc-blue {
+           background-color: blue;
+       }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box box-30">我是一个DIV</div>
+    <button>移除30px</button>
+    <button>添加红色</button>
+    <button>切换背景</button>
+    <button>背景是否为蓝色</button>
+    <button>查看字体颜色</button>
+    <button>查看所有样式</button>
+    <script>
+        var box = document.querySelector('.box')
+        var btnArr = document.querySelectorAll('button')
+        // classList属性有多个方法操作元素的类
+        btnArr[0].onclick = function () {
+            // 移除
+            box.classList.remove('box-30')
+        }
+        btnArr[1].onclick = function () {
+            // 添加
+            box.classList.add('box-red')
+        }
+        btnArr[2].onclick = function () {
+            // 切换
+            box.classList.toggle('box-bgc-blue')
+        }
+        btnArr[3].onclick = function () {
+            // 是否包含某个类
+           var flag = box.classList.contains('box-bgc-blue')
+           console.log(flag)
+        }
+        btnArr[4].onclick = function () {
+            // 返回元素该索引对应的类
+           console.log(box.classList.item(1))
+        }
+        btnArr[5].onclick = function () {
+            // 获得所有样式
+            console.log(box.classList)
+        }
+        
+    </script>
+</body>
+</html>
